@@ -1,3 +1,5 @@
 #!/bin/bash
+#echo 'Moving going back home'
 cd ~
-pwd
+# echo 'Check home dir'
+# pwd
