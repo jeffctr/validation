@@ -1,7 +1,4 @@
 #!/bin/bash
-echo 'Moving going back home'
 pwd
 cd ~
-echo 'Check home dir'
 pwd
-echo 'Why?'
