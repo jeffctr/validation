@@ -13,7 +13,7 @@ services:
       - localdev
     restart: on-failure
     volumes:
-      - ./task0_module1/quickstart:/src
+      - ./task0_module1:/src
     command: server -D
     ports:
       - 1313:1313
