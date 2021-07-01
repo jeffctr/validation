@@ -13,9 +13,10 @@ services:
       - localdev
     restart: on-failure
     volumes:
-      - ./task0_module1/dist:/src
+      - ./task0_module1:/src
     command: server -D
     ports:
       - 1313:1313
     environment:
-      HUGO_ENV: DEV
+      - HUGO_DESTINATION=dist
+      - HUGO_ENV=DEV
