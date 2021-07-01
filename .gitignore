@@ -1,3 +1,5 @@
 .vagrant/
 *.swp
+module1_task0/task0_module1/dist/public/*
+module1_task0/task0_module1/dist/resources/_gen/*
 

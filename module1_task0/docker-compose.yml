@@ -1,0 +1,19 @@
+version: '3.7'
+
+networks:
+  localdev:
+    external: true
+    name: localdev
+
+services:
+  hugopage:
+    image: klakegg/hugo:ext-ubuntu
+    container_name: hugo
+    networks:
+      - localdev
+    restart: on-failure
+    volumes:
+      - ./task0_module1/quickstart:/src
+    command: server -D
+    ports:
+      - 1313:1313
