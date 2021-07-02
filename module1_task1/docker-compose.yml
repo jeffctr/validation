@@ -22,6 +22,7 @@ services:
       - ./themes:/src/themes
       - ./config.toml:/src/config.toml
       - ./Makefile:/src/Makefile
+      - ./build.sh:/src/build.sh
     command: server -D
     ports:
       - 1313:1313
