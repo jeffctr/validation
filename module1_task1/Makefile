@@ -1,5 +1,5 @@
 build: ## The build option will execute the hugo creeate website.
-	@hugo > /dev/null 2>&1
+	@hugo > /dev/null
 clean: ## The clean option will remove any file from the folder dist/
 	@rm -rf dist/*
 post: ## The post option will create a new post with the specific file name and title
