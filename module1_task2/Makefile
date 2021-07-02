@@ -7,8 +7,8 @@ ifdef $(and POST_NAME, POST_TITLE)
 	/bin/bash build.sh -N=${POST_NAME} -T="${POST_TITLE}" -p
 endif
 help:
-	echo "make build: Creates compile and execute the hugo webpage"
-	echo "make clean: Deletes everything that is in the folder dist"
-	echo "make POST_NAME=<file_name> POST_TITLE=<file_title> post: Creates a new post inside content/posts"
+	echo "build: Creates compile and execute the hugo webpage"
+	echo "clean: Deletes everything that is in the folder dist"
+	echo "post: POST_NAME=<file_name> POST_TITLE=<file_title> post: Creates a new post inside content/posts"
 
 
