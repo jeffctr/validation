@@ -8,7 +8,7 @@ ifdef $(and POST_NAME, POST_TITLE)
 endif
 help:
 	printf "build: Creates compile and execute the hugo webpage"
-	printf "clean: Deletes everything that is in the folder dist"
 	printf "post: POST_NAME=<file_name> POST_TITLE=<file_title> post: Creates a new post inside content/posts \n"
+	printf "clean: Deletes everything that is in the folder dist"
 
 
