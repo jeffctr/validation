@@ -1,8 +1,8 @@
-build: build.sh ## The build option will execute the hugo creeate website.
-	$(shell /bin/bash build.sh -b)
-clean: build.sh ## The clean option will remove any file from the folder dist/
-	$(shell /bin/bash build.sh -c)
-post: build.sh ## The post option will create a new post with the specific file name and title
+build: ## The build option will execute the hugo creeate website.
+	@hugo > /dev/null 2>&1
+clean: ## The clean option will remove any file from the folder dist/
+	@rm -rf dist/*
+post: ## The post option will create a new post with the specific file name and title
 ifdef $(and POST_NAME, POST_TITLE)
 	@hugo new posts/"${POST_NAME}.md"
 	## Now read the file and change title
