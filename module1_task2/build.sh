@@ -6,26 +6,26 @@ while [[ $# -gt 0 ]]; do
 
   case $key in
     -b|build)
-      shift # past argument
+      shift ## past argument
       hugo > /dev/null 2>&1
       ;;
     -c|clean)
-      shift # past argument
+      shift ## past argument
       rm -rf dist/*
       ;;
     -N=*|POST_NAME=*)
       POSTNAME="${key#*=}"
-      shift # past argument=value
+      shift ## past argument=value
       ;;
     -T=*|POST_TITLE=*)
       POSTTITLE="${key#*=}"
-      shift # past argument=value
+      shift ## past argument=value
       ;;
     -p|post)
       shift # past argument
       if [ ! -z "$POSTNAME" ]; then
           hugo new posts/"$POSTNAME.md"  $POSTTITLE
-          # Now read the file and change title
+          ## Now read the file and change title
           sed -i "s/${POSTNAME}/${POSTTITLE}/gi" "./content/posts/${POSTNAME}.md"
       fi
       ;;
