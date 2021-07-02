@@ -8,10 +8,12 @@ while [[ $# -gt 0 ]]; do
     -b|build)
       shift # past argument
       hugo
+      echo -e ""
       ;;
     -c|clean)
       shift # past argument
-       rm -rf dist/*
+      rm -rf dist/*
+      echo -e ""
       ;;
     -N=*|POST_NAME=*)
       POSTNAME="${key#*=}"
@@ -27,6 +29,7 @@ while [[ $# -gt 0 ]]; do
           hugo new posts/"$POSTNAME.md"  $POSTTITLE
           # Now read the file and change title
           sed -i "s/${POSTNAME}/${POSTTITLE}/gi" "./content/posts/${POSTNAME}.md"
+          echo -e ""
       fi
       ;;
     *)    # unknown option
