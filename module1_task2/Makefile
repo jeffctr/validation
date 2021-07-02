@@ -9,7 +9,7 @@ endif
 help:
 	@echo "build: b"
 	@echo "post: p"
-	@echo "clean: c
+	@echo "clean: c"
 	@echo "help: h"
 
 
