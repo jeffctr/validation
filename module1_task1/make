@@ -7,11 +7,11 @@ while [[ $# -gt 0 ]]; do
   case $key in
     -b|build)
       shift # past argument
-      echo "Run buld command hugo"
+      hugo
       ;;
     -c|clean)
       shift # past argument
-      echo "Run clean command rm -rf task0_module1/dist/*"
+       rm -rf dist/*
       ;;
     -N=*|POST_NAME=*)
       POSTNAME="${key#*=}"
@@ -24,7 +24,7 @@ while [[ $# -gt 0 ]]; do
     -p|post)
       shift # past argument
       if [ ! -z "$POSTNAME" ]; then
-          echo "run create post command 'hugo new post/${POSTNAME}.md with title ${POSTTITLE}'"
+          hugo new posts/"$POSTNAME.md"  $POSTTITLE
       fi
       ;;
     *)    # unknown option

@@ -21,6 +21,7 @@ services:
       - ./task0_module1/dist:/src/dist
       - ./themes:/src/themes
       - ./config.toml:/src/config.toml
+      - ./make:/src/make
     command: server -D
     ports:
       - 1313:1313
