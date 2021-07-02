@@ -26,8 +26,7 @@ while [[ $# -gt 0 ]]; do
       if [ ! -z "$POSTNAME" ]; then
           hugo new posts/"$POSTNAME.md"  $POSTTITLE
           # Now read the file and change title
-          PARAMETER="${POSTTITLE/-/ }"
-          sed -i "s/${PARAMETER}/${POSTTITLE}/gi" "./content/posts/${POSTNAME}.md"
+          sed -i "s/${POSTNAME}/${POSTTITLE}/gi" "./content/posts/${POSTNAME}.md"
       fi
       ;;
     *)    # unknown option
