@@ -7,9 +7,9 @@ ifdef $(and POST_NAME, POST_TITLE)
 	/bin/bash build.sh -N=${POST_NAME} -T="${POST_TITLE}" -p
 endif
 help:
-	printf "build: Creates compile and execute the hugo webpage"
-	printf "post: POST_NAME=<file_name> POST_TITLE=<file_title> post: Creates a new post inside content/posts \n"
-	printf "clean: "
+	printf "build:"
+	printf "post:"
+	printf "clean:"
 	printf "help: Show this help usage"
 
 
