@@ -1,5 +1,6 @@
 .vagrant/
 *.swp
 module1_task*/task0_module1/dist/
+module1_task*/dist/
 module1_task*/resources/_gen/
 
