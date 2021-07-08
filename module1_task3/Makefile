@@ -1,4 +1,5 @@
 build: build.sh ## The build option will execute the hugo creeate website.
+	rm dummyfolder
 	$(shell /bin/bash build.sh -b)
 clean: build.sh ## The clean option will remove any file from the folder dist/
 	$(shell /bin/bash build.sh -c)
