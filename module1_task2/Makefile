@@ -9,7 +9,8 @@ ifdef $(and POST_NAME, POST_TITLE)
 	@sed -i "s/${POST_NAME}/${POST_TITLE}/gi" "./content/posts/${POST_NAME}.md"
 endif
 help:
-	@echo "clean: clean info clean Clean"
+	@echo "clean: clean info clean Clean, CLEAN"
+	@echo "clear: clear info clear Clear"
 	@echo "build: build info"
 	@echo "post: post info"
 	@echo "help: help info"
