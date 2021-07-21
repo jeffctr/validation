@@ -9,9 +9,9 @@ ifdef $(and POST_NAME, POST_TITLE)
 	@sed -i "s/${POST_NAME}/${POST_TITLE}/gi" "./content/posts/${POST_NAME}.md"
 endif
 help:
-	@echo "build: b"
-	@echo "post: p"
-	@echo "clean: c"
-	@echo "help: h"
+	@echo "build: build info"
+	@echo "post: post info"
+	@echo "clean: clean info clean Clean"
+	@echo "help: help info"
 
 
