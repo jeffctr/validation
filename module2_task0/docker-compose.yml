@@ -1,0 +1,20 @@
+version: '3.7'
+
+networks:
+  localdev:
+    external: true
+    name: localdev
+
+services:
+  hugopage:
+    build:
+      context: .
+    container_name: golang
+    networks:
+      - localdev
+    command: tail -f > /dev/null
+    restart: on-failure
+    volumes:
+      - ./:/go/src/app
+    ports:
+      - 9999:9999
