@@ -8,12 +8,12 @@ test: ## Check if the app is running
 	@curl http://localhost:9999
 	@sleep 1
 	@curl http://localhost:9999/health
-stop:
+stop: ## Kill the process
 	@pgrep awesome-api | xargs kill
 help:
+	@echo "help: Show this help usage"
 	@echo "build: The build option will create the require files"
 	@echo "run: The run option will execute the app"
+	@echo "stop: kill the process"
 	@echo "clean: The clean option will remove the binary and log files "
 	@echo "test: Check if the app is running"
-	@echo "stop: kill the process"
-	@echo "help: Show this help usage"
