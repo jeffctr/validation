@@ -4,7 +4,7 @@ clean: ## The clean option will remove any file from the folder dist/
 	@rm -rf dist/*
 post: ## The post option will create a new post with the specific file name and title
 ifdef $(and POST_NAME, POST_TITLE)
-	@hugo new posts/"${POST_NAME}.md"
+	@hugo new posts/"${POST_NAME}.md" > /dev/null
 	@sed -i "s/${POST_NAME}/${POST_TITLE}/gi" "./content/posts/${POST_NAME}.md"
 endif
 help:
