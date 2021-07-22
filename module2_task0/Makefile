@@ -1,5 +1,5 @@
 build: ## The build option will create the require files
-	@go build
+	@go build -o awesome-api main.go
 run: ## The run option will execute the app.
 	@./awesome-api >./awesome.log 2>&1 &
 clean: ## The clean option will remove the binary and log files
