@@ -13,16 +13,7 @@ services:
       - localdev
     restart: on-failure
     volumes:
-      - ./archetypes:/src/archetypes
-      - ./content:/src/content
-      - ./data:/src/data
-      - ./layouts:/src/layouts
-      - ./static:/src/static
-      - ./task0_module1/dist:/src/dist
-      - ./themes:/src/themes
-      - ./config.toml:/src/config.toml
-      - ./Makefile:/src/Makefile
-      - ./build.sh:/src/build.sh
+      - ./:/src
     command: server -D
     ports:
       - 1313:1313
