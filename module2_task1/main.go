@@ -32,13 +32,7 @@ func setupRouter() *mux.Router {
 }
 
 func HealthCheckHandler(w http.ResponseWriter, r *http.Request) {
-  // Print a line in the logs
   fmt.Println("HIT: healthcheck")
-
-  // Write the string "ALIVE" into the response's body
   _, _ = io.WriteString(w, "ALIVE")
-
-  // End of the function: return HTTP 200 by default
 }
-
 

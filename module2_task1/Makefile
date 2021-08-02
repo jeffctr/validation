@@ -1,5 +1,4 @@
-build: ## The build option will create the require files
-	@golangci-lint run
+build: lint ## The build option will create the require files
 	@go build -o awesome-api main.go
 lint: ## Static analysis
 	@golangci-lint run
